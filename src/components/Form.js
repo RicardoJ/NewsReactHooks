@@ -3,7 +3,17 @@ import styles from './Form.module.css';
 import useSelect from '../hooks/useSelect';
 
 const Form = () => {
-    const [category , SelectNews] = useSelect();
+
+    const OPTIONS =[
+        {value: 'general' , label : 'General'},
+        {value: 'business' , label : 'Negocios'},
+        {value: 'entertainment' , label : 'Entretenimiento'},
+        {value: 'health' , label : 'Salud'},
+        {value: 'science' , label : 'Ciencia'},
+        {value: 'sports' , label : 'Deportes'},
+        {value: 'technology' , label : 'Tecnología'}
+    ]
+    const [category , SelectNews] = useSelect('general' , OPTIONS);
     return ( 
         <div className = {`${styles.buscador}row`}>
             <div className = "col s12 m8 offset-m2">

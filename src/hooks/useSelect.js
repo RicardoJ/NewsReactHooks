@@ -1,13 +1,16 @@
 import React, { useState } from 'react';
 
 const useSelect = (stateInitial, options) => {
-    const [state , setState] = useState('');
+    const [state, setState] = useState(stateInitial);
     const SelectNews = () => (
         <select
             className="browser-default"
-
+            value = {state}
+            onChange = {e => setState(e.target.value)}
         >
-            <option value = "">Seleccione</option>
+            {options.map(option => (
+                <option key={option.value} value={option.value}>{option.label}</option>
+            ))}
 
         </select>
     );
