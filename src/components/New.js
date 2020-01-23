@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const News = ({ notice }) => {
     const { urlToImage, url, title, description, source } = notice;
@@ -27,6 +28,9 @@ const News = ({ notice }) => {
             </div>
         </div>
     );
+}
+News.propTypes={
+    noticie : PropTypes.object.isRequired
 }
 
 export default News;
