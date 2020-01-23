@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Header = ({titleHeader}) => {
     return ( 
@@ -8,5 +9,7 @@ const Header = ({titleHeader}) => {
         </nav>
      );
 }
- 
+Header.propTypes={
+    titleHeader : PropTypes.string.isRequired
+}
 export default Header;
