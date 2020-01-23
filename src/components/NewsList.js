@@ -6,7 +6,10 @@ const NewsList = ({ news }) => {
 
         <div class="row">
           {news.map(notice => (
-                <News />
+                <News 
+                key ={notice.url} 
+                notice = {notice}
+                />
             ))}
         </div>
     );
