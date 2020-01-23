@@ -1,0 +1,10 @@
+.card-action .btn {
+    width: 100%;
+  }
+  .card-content h3 {
+    font-size: 1.4rem;
+  }
+  .row {
+  display: flex;
+  flex-wrap: wrap;
+}
